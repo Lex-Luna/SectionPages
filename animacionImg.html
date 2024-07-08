@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen Animada</title>
+</head>
+<body>
+    <style>
+        .slider{
+            width: 50%;
+            overflow: hidden;
+        }
+        .slider, .slider-track{
+            display: flex;
+            animation: scroll 3s linear infinite;
+            width: calc(200px *9);
+            justify-content: start;
+        }
+        .slider, img{
+            width:100%;
+        }
+        @keyframes scroll{
+            0%{
+                -webkit-transfor: translateX(0);
+                transform:translateX(0)
+            }
+            100%{
+                -webkit-transfor: translateX(calc(-65px *3));
+                transform:translateX(calc(40%));
+            }
+        }
+    </style>
+    <div class="slider">
+        <div class="slider-track">
+            <div class="slide">
+                <img src="https://i.ibb.co/j3sXCyy/angularjs.png" alt="angularjs" border="0">
+
+
+
+
+
+            </div>
+            
+            <div class="slide">
+                <img src="https://i.ibb.co/Jy7cKYN/website.png" alt="website" border="0">
+            </div>
+
+            <div class="slide">
+                <img src="https://i.ibb.co/H2P5Vw3/django.png" alt="django" border="0">
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

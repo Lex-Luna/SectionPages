@@ -1,0 +1,336 @@
+<style>
+    .Secciones {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .titulo {
+    color: white;
+    font-family: monospace;
+    font-size: 2.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  
+  .titulo span {
+    font-size: 2.5rem;
+    color: #5f6a6a;
+    font-family: monospace;
+  }
+  
+  body {
+    /* margin: 0 auto; */
+    margin-top: 8rem;
+    font-family: "Lato";
+    color: #333;
+    /* display: flex;
+    justify-content: center; */
+  }
+  
+  .icon-cart {
+    width: 40px;
+    height: 40px;
+    stroke: #000;
+  }
+  
+  .icon-cart:hover {
+    cursor: pointer;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+.container-items {
+  justify-content: center;
+  display: grid;
+  background-color: transparent;
+}
+
+.item {
+  border-radius: 10px;
+  max-width: 15rem;
+  min-height: 32rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.item:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  transition: all 0.5s;
+}
+
+.item figure {
+  overflow: hidden;
+}
+
+.item:hover img {
+  transform: scale(1.2);
+}
+
+.info-product {
+  padding: 15px 30px;
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.info-product button {
+  border: none;
+  background: none;
+  background-color: #000;
+  color: #fff;
+  padding: 15px 10px;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+@media (min-width: 370px) {
+  .container-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+  }
+}  
+</style>
+<body>
+<div class="Secciones">
+    <div id="Camas" class="Fix"></div>
+
+    <h2>Camas</h2>
+
+    <div class="container-items">
+        <div class="item">
+            <figure>
+                <img src="Imagenes/CamaPle.jpeg" loading="lazy" alt="producto" />
+            </figure>
+            <div class="info-product">
+                <h3>Cama Plegable con Colchon (10cm)</h3>
+                <p class="price">$105</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="Imagenes/CamaPlegable01.jpeg" loading="lazy" alt="producto" />
+            </figure>
+            <div class="info-product">
+                <h3>Cama Plegable con Colchon (7cm)</h3>
+                <p class="price">$95</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="Imagenes/CamasinColchon.jpeg" loading="lazy" alt="producto" />
+            </figure>
+            <div class="info-product">
+                <h3>Cama Sola</h3>
+                <p class="price">$80</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="Imagenes/CamaTapizada.jpeg" loading="lazy" alt="producto" />
+            </figure>
+            <div class="info-product">
+                <h3>Cama Tapizada</h3>
+                <p class="price">$145</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="Imagenes/CamaMadera.jpeg" loading="lazy" alt="producto" />
+            </figure>
+            <div class="info-product">
+                <h3>Cama de Madera</h3>
+                <p class="price">$140</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="Imagenes/LiteraMetalica.jpeg" loading="lazy" alt="producto" />
+            </figure>
+            <div class="info-product">
+                <h3>Litera Metalica 1 Plz</h3>
+                <p class="price">$150</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="Sillas" class="Fix"></div>
+
+    <h2>Sillas</h2>
+
+    <div class="container-items">
+        <div class="item">
+            <figure>
+                <img src="Imagenes/SillaGrafitti.jpeg" loading="lazy" alt="producto" />
+            </figure>
+            <div class="info-product">
+                <h3>Silla Grafitti</h3>
+                <p class="price">$39</p>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="Imagenes/SillaMixta.jpeg" loading="lazy" alt="producto" />
+            </figure>
+            <div class="info-product">
+                <h3>Silla Mixta</h3>
+                <p class="price">$23,99</p>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="Imagenes/SillaParma.jpeg" loading="lazy" alt="producto" />
+            </figure>
+            <div class="info-product">
+                <h3>Silla Parma</h3>
+                <p class="price">$23,99</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="Regatones" class="Fix"></div>
+
+    <h2>Regatones</h2>
+
+    <div class="container-items">
+        <div class="item">
+            <figure>
+                <img src="Imagenes/Regaton1.jpeg" loading="lazy" alt="producto" />
+            </figure>
+            <div class="info-product">
+                <h3>Regaton Angulo</h3>
+                <!-- <p class="price">$4,99</p> -->
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="Imagenes/RegatonBaston.jpeg" loading="lazy" alt="producto" />
+            </figure>
+            <div class="info-product">
+                <h3>Regaton Baston</h3>
+                <!-- <p class="price">$23,99</p> -->
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="Imagenes/Regaton3.jpeg" loading="lazy" alt="producto" />
+            </figure>
+            <div class="info-product">
+                <h3>Regatones Cuadrados</h3>
+                <p class="price">Variedad de medidas</p>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="Imagenes/Regaton4.jpeg" loading="lazy" alt="producto" />
+            </figure>
+            <div class="info-product">
+                <h3>Regaton Redondos</h3>
+                <p class="price">Variedad de medidas</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="Estanterias" class="Fix"></div>
+
+    <h2>Estanterias</h2>
+
+    <div class="container-items">
+        <div class="item">
+            <figure>
+                <img src="Imagenes/Estante1.jpeg" loading="lazy" alt="producto" />
+            </figure>
+            <div class="info-product">
+                <h3>Estanteria 90x30</h3>
+                <p class="price">$120</p>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="Imagenes/Estante2.jpeg" loading="lazy" alt="producto" />
+            </figure>
+            <div class="info-product">
+                <h3>Estanteria 3 bandejas</h3>
+                <p class="price">$50</p>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="Imagenes/Estanteria4Latas.jpeg" loading="lazy" alt="producto" />
+            </figure>
+            <div class="info-product">
+                <h3>Estanteria 4 Bandejas</h3>
+                <p class="price">$85</p>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="Imagenes/EstanteriaGris.jpeg" loading="lazy" alt="producto" />
+            </figure>
+            <div class="info-product">
+                <h3>Estanteria 90x30 Gris</h3>
+                <p class="price">$95</p>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="Imagenes/EstandMixto.jpeg" loading="lazy" alt="producto" />
+            </figure>
+            <div class="info-product">
+                <h3>Estanteria Mixta</h3>
+                <p class="price">$180</p>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="Imagenes/EstanteNegra.jpeg" loading="lazy" alt="producto" />
+            </figure>
+            <div class="info-product">
+                <h3>Estanteria 90x30 Negra</h3>
+                <p class="price">$99</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="Acero" class="Fix"></div>
+
+    
+</div>
+</body>
