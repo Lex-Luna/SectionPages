@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form id="Formu" class="formulario" method="POST">
+        <legend>Deja tu opinion llenando todos los campos</legend>
+
+        <div class="contenedor-campos ">
+            <div class="campo">
+                <label>Nombre</label>
+                <input class="input-text " type="text " name="name" placeholder="Nombre " id="Nombre" required />
+            </div>
+            <div class="campo">
+                <label>Teléfono</label>
+                <input class="input-text " type="tel " name="telephone" placeholder="Teléfono" id="Telefono" />
+            </div>
+            <div class="campo w-100 ">
+                <label>Correo</label>
+
+                <input class="input-text " type="email" name="email" placeholder="Mail" id="Mail" />
+            </div>
+            <div class="campo w-100 ">
+                <label>Tu Opinion:</label>
+
+                <textarea class="input-text " id="Mensaje" name="message"></textarea>
+            </div>
+        </div>
+
+        <div class="enviar">
+            <input class="boton w100" type="submit" value="Enviar" id="enviar" />
+        </div>
+    </form>
+    <script>
+        var formulario = document.getElementById('Formu');
+        const savePregunta = (nombre, telefono, mail, mensaje) =>
+    db.collection("Pregunta").doc().set({
+        nombre,
+        telefono,
+        mail,
+        mensaje
+    })
+formulario.addEventListener("submit", async(e) => {
+        e.preventDefault();
+        const nombre = formulario["Nombre"];
+        const telefono = formulario["Telefono"];
+        const mail = formulario["Mail"];
+        const mensaje = formulario["Mensaje"];
+        try {
+
+            await savePregunta(nombre.value, telefono.value, mail.value, mensaje.value);
+            Email.send({
+                SecureToken: "e1248656-4bbb-430e-b57c-aa18f08a51ba",
+                To: 'alexisgabruiel.lu@gmail.com',
+                From: "alexisgabruiel.lu@gmail.com",
+                Subject: "Test email",
+                Body: `Nombre: ${nombre.value}\nTeléfono: ${telefono.value}\nCorreo: ${mail.value}\nMensaje: ${mensaje.value}`
+
+            }).then(
+                message => alert(message)
+            );
+            formulario.reset();
+            alert('La información ha sido enviada correctamente');
+            nombre.focus();
+        } catch (error) {
+            alert("No ha sido posible enviar los datos " + error.mensaje);
+            console.log(error)
+        }
+    })
+    </script>
+</body>
+</html>
